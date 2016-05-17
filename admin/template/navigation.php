@@ -20,7 +20,7 @@
 	           	  
 	           	  <li><a href="?page=dashboard">Dashboard</a></li>
 	           	  <li><a href="?page=pages">Pages</a></li>
-	           	  <li><a href="?page=users">Users</a></li>
+	           	  <li><a href="?page=admins">Admins</a></li>
 	           	  <li><a href="?page=navigation">Navigation</a></li>
 	           	  <li><a href="?page=settings">Settings</a></li>
 	           	  
@@ -29,14 +29,14 @@
 	           <div class="pull-right">
 	           	  <ul class="nav navbar-nav">
 	           	  	<li class="dropdown">
-		                <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="margin-right: 20px;"><?php echo $user['fullname']; ?> <span class="caret"></span></a>
+		                <a href="#" class="dropdown-toggle" data-toggle="dropdown" style="margin-right: 20px;"><?php echo $admin['fullname']; ?> <span class="caret"></span></a>
 			            <ul class="dropdown-menu">
 			            	<li><a href="logout.php">Logout</a></li>		           
 		                </ul>
 		           </li>
 		           
 		           <li>
-	           	  		<!-- To show debug button when vaklue is 1 -->
+	           	  		<!-- To show debug button when value is 1 -->
 						<?php if ($debug == 1) {?>
 							<button id="btn-debug" class="btn btn-default navbar-btn"><i class="fa fa-bug"></i></button>
 						<?php } ?>

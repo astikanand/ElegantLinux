@@ -1,6 +1,6 @@
 <nav class="navbar navbar-default" role="navigation">
 
-	<!-- To show debug button when vaklue is 1 -->
+	<!-- To show debug button when value is 1 -->
 	<?php if ($debug == 1) {?>
 		<button id="btn-debug"><i class="fa fa-bug"></i></button>
 	<?php } ?>
@@ -12,7 +12,7 @@
 		<div class="row" style="height: 75px;border-bottom: 1px solid #a6a6a6" >
 			<div class="col-md-3">
 				<ul>
-					<a style="text-decoration: none" ><h1 style="font-family:Comic Sans MS;font-weight:bolder"><span style="color:black">Elegant</span><span style="color:#009999">Linux</span></h1></a>			
+					<a href="/home" style="text-decoration: none" ><h1 style="font-family:Comic Sans MS;font-weight:bolder"><span style="color:black">Elegant</span><span style="color:#009999">Linux</span></h1></a>			
 				</ul>
 			</div>
 
@@ -25,12 +25,8 @@
 				    </div><!-- /input-group -->
 			</div>
 
-			<div class="col-md-4">
-				<ul>
-					<li><a><i class="fa fa-user"></i></a></li>
-				</ul>
-			</div>
-			<!--<div class="col-md-3">
+
+			<div class="col-md-3">
 			       <div id="header1">
 						<ul>
 						  <li><a style="margin-right: 20px" href="#home"><img src="Icons/instagram.png" id="social" onmouseover="this.src=('Icons/instagram1.png')" onmouseleave="this.src=('Icons/instagram.png')" /></a> </li>
@@ -43,26 +39,33 @@
 						</ul>
 					</div>
 
-			</div> -->
-		</div> <!-- End Row -->
+			</div>
 
+
+		<div class="col-md-1">
+			<a type="button" class="btn btn-primary btn-sm navbar-btn" style="margin-top: 20px" href="/admin">Admin Login</a>
+		</div>
+
+		</div>
+
+      <?php
+        if ($page['label'] == "Home") {
+	       include('template/imageslider.php');
+        }
+	  ?>
+
+	  <?php
+        if ($page['label'] != "Home") { ?>
 
 
 		<div style="height:350px; width: 100%;position:relative;background-image:url('background/download.jpg');background-size: cover;background-position: center ">
 			 <div style="position:absolute;color:white;height:100px;width:50%;margin-left:25%; margin-top:80px">
 			 	  <h1 style="color: white;font-family:Marlett;font-size: 35px">Linux For Smarter Humans</h1>
 
-			     <div class="col-md-6" style="margin-top: 15px">
-				    <button type="button" class="btn btn-primary navbar-btn" style="margin-right: 10px;margin-left:120px">Login</button>
-				    <button type="button" class="btn btn-info navbar-btn">Signup</button>
-				 </div>
-
 			 </div>
+       </div>
 
-
-		</div>
-
-
+     <?php }?>
 
 
   	  <div class="container-fluid">

@@ -11,9 +11,9 @@ function data_setting_value($dbc,$id) {
 	
 }
 
-//Function to get user data
+//Function to get admin data
 
-function data_user ($dbc,$id) {
+function data_admin ($dbc,$id) {
 	
 	if(is_numeric($id)) {
 		$cond = "WHERE id = '$id'";
@@ -21,7 +21,7 @@ function data_user ($dbc,$id) {
 		$cond = "WHERE email = '$id'";
 	}
 	
-	$q = "SELECT * FROM users $cond";
+	$q = "SELECT * FROM admins $cond";
 	$r = mysqli_query($dbc, $q);
 	
 	$data = mysqli_fetch_assoc($r);

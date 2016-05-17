@@ -18,28 +18,28 @@
 	</script>
 <?php } ?>
 
-<h1>User Manager</h1>
+<h1>Admin Manager</h1>
 
 <div class="row">
    	  <div class="col-md-3">
    	  	 
   	   	  	 	
   	   	       <div class="list-group">
-  	  	   	  	   <a class="list-group-item" href="?page=users">
-						<i class="fa fa-plus-square"></i> New User
+  	  	   	  	   <a class="list-group-item" href="?page=admins">
+						<i class="fa fa-plus-square"></i> New Admin
 				   </a>
 			   
   	   	  	 	   <?php
-  	  	   	  	 	    $q = "SELECT * FROM users ORDER BY first ASC";
+  	  	   	  	 	    $q = "SELECT * FROM admins ORDER BY first ASC";
 						$r = mysqli_query($dbc, $q);
 						
 						while($list = mysqli_fetch_assoc($r)) {
 							
-							$list = data_user($dbc,$list['id']);
+							$list = data_admin($dbc,$list['id']);
 							//$blurb = substr(strip_tags($page_list['body']),0,160);
 						?>
 						
-						<a class="list-group-item <?php selected($list['id'],$opened['id'],'active'); ?>" href="index.php?page=users&id=<?php echo $list['id']; ?>">
+						<a class="list-group-item <?php selected($list['id'],$opened['id'],'active'); ?>" href="index.php?page=admins&id=<?php echo $list['id']; ?>">
 							<h4 class="list-group-item-heading"><?php echo $list['fullname']; ?></h4>
 						    <!--<p class="list-group-item-text"><?php echo $blurb; ?></p> -->
 						</a>
@@ -52,7 +52,7 @@
    	   	
    	   	<?php if(isset($message)) { echo $message; } ?>
    	  	 
-   	  	 <form action="index.php?page=users&id=<?php echo $opened['id']; ?>" method="post" role="form">
+   	  	 <form action="index.php?page=admins&id=<?php echo $opened['id']; ?>" method="post" role="form">
    	  	 	
             <div id="avatar">
 				<?php if($opened['avatar'] != ''){ ?>

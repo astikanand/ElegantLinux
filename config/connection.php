@@ -1,6 +1,6 @@
 <?php
 
-$dbc = mysqli_connect('localhost','astikanand','Nandan178#suresh','ElegantLinux');
+$dbc = mysqli_connect('localhost','root','','ElegantLinux');
 if(!$dbc){
 	die("Database Connection Error: ".mysqli_connect_error());
 }

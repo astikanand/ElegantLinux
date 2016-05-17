@@ -6,11 +6,11 @@
 include('../config/connection.php');
 
 if($_POST) {
-	$q = "SELECT * FROM  users WHERE email = '$_POST[email]' AND password = SHA1('$_POST[password]') ";
+	$q = "SELECT * FROM  admins WHERE email = '$_POST[email]' AND password = SHA1('$_POST[password]') ";
     $r = mysqli_query($dbc, $q);
 	
 	if(mysqli_num_rows($r) == 1) {
-		$_SESSION['username'] = $_POST['email'];
+		$_SESSION['adminname'] = $_POST['email'];
 		header('Location: index.php');
 	}
 }

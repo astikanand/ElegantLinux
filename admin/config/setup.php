@@ -33,8 +33,8 @@ include('config/queries.php');
 
 
 
-# User Setup:
-$user = data_user($dbc,$_SESSION['username']);
+# Admin Setup:
+$admin = data_admin($dbc,$_SESSION['adminname']);
 
 # Site Setup:
 $debug = data_setting_value($dbc,'debug-status');

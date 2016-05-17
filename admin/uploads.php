@@ -7,10 +7,10 @@ $ext = pathinfo($_FILES['file']['name'], PATHINFO_EXTENSION);
 $newname = time();
 $random = rand(100,999);
 $name = $newname.$random.'.'.$ext;
-$q = "SELECT avatar FROM users WHERE id = $id";
+$q = "SELECT avatar FROM admins WHERE id = $id";
 $r = mysqli_query($dbc, $q);
 $old = mysqli_fetch_assoc($r);
-$q = "UPDATE users SET avatar = '$name' WHERE id = $id";
+$q = "UPDATE admins SET avatar = '$name' WHERE id = $id";
 $r = mysqli_query($dbc, $q);
  
 echo $q.'<br>';

@@ -4,7 +4,7 @@
 
 session_start();
 
-unset($_SESSION['username']); // Delete the username key
+unset($_SESSION['adminname']); // Delete the adminname key
 
 //session_destroy(); // This would delete all of the session keys
 

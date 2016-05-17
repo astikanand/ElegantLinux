@@ -16,11 +16,11 @@
 					
 					if(isset($_POST['id']) != '') {
 						$action = 'updated';
-						$q = "UPDATE posts SET user = $_POST[user],slug = '$_POST[slug]',title = '$title',label = '$label',header = '$header',body = '$body' WHERE id = $_GET[id]";
+						$q = "UPDATE posts SET admin = $_POST[admin],slug = '$_POST[slug]',title = '$title',label = '$label',header = '$header',body = '$body' WHERE id = $_GET[id]";
 					    
 					} else {
 						$action = 'added';
-						$q = "INSERT INTO posts (type,user,slug,title,label,header,body) VALUES (1,$_POST[user],'$_POST[slug]','$title','$label','$header','$body')";	
+						$q = "INSERT INTO posts (type,admin,slug,title,label,header,body) VALUES (1,$_POST[admin],'$_POST[slug]','$title','$label','$header','$body')";	
 					    
 				    }
 					
@@ -45,8 +45,8 @@
 		
 		
 		
-		/////**************** Queries for users *************************//////	
-		case 'users':
+		/////**************** Queries for admins *************************//////	
+		case 'admins':
                  if(isset($_POST['submitted']) == 1) {
 				
 						$first = mysqli_real_escape_string($dbc, $_POST['first']);
@@ -74,14 +74,14 @@
 						if(isset($_POST['id']) != '') {
 							
 							$action = 'updated';
-							$q = "UPDATE users SET first = '$first', last = '$last', email = '$_POST[email]', $password status = $_POST[status] WHERE id = $_GET[id]";
+							$q = "UPDATE admins SET first = '$first', last = '$last', email = '$_POST[email]', $password status = $_POST[status] WHERE id = $_GET[id]";
 							$r = mysqli_query($dbc, $q);
 							
 						} else {
 							
 							$action = 'added';
 							
-							$q = "INSERT INTO users (first, last, email, password, status) VALUES ('$first', '$last', '$_POST[email]', SHA1('$_POST[password]'), '$_POST[status]')";
+							$q = "INSERT INTO admins (first, last, email, password, status) VALUES ('$first', '$last', '$_POST[email]', SHA1('$_POST[password]'), '$_POST[status]')";
 							
 							if($verify == true) {
 								$r = mysqli_query($dbc, $q);
@@ -91,11 +91,11 @@
 						
 						if($r){
 							
-							$message = '<p class="alert alert-success">User was '.$action.'!</p>';
+							$message = '<p class="alert alert-success">Admin was '.$action.'!</p>';
 							
 						} else {
 							
-							$message = '<p class="alert alert-danger">User could not be '.$action.' because: '.mysqli_error($dbc);
+							$message = '<p class="alert alert-danger">Admin could not be '.$action.' because: '.mysqli_error($dbc);
 							if($verify == false) {
 								$message .= '<p class="alert alert-danger">Password fields empty and/or do not match.</p>';
 							}
@@ -105,7 +105,7 @@
 							
 			      }
 			
-			if(isset($_GET['id'])) { $opened = data_user($dbc, $_GET['id']); }
+			if(isset($_GET['id'])) { $opened = data_admin($dbc, $_GET['id']); }
 			
 		break;
 		

@@ -1,7 +1,7 @@
 <?php
 include('../config/connection.php');
 $id = $_GET['id'];	
-$q = "SELECT avatar FROM users WHERE id = $id";
+$q = "SELECT avatar FROM admins WHERE id = $id";
 $r = mysqli_query($dbc, $q);
 $data = mysqli_fetch_assoc($r);
 ?>

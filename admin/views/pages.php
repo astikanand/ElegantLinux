@@ -44,25 +44,25 @@
    	  	 	</div>
    	  	 	
    	  	 	<div class="form-group">
-   	  	 		<label for="user">User:</label>
-   	  	 		<select class="form-control" name="user" id="user" >
-   	  	 			<option value="0">No User</option>
+   	  	 		<label for="admin">Admin:</label>
+   	  	 		<select class="form-control" name="admin" id="admin" >
+   	  	 			<option value="0">No Admin</option>
    	  	 			<?php
-   	  	 			   $q = "SELECT id FROM users ORDER BY first ASC";
+   	  	 			   $q = "SELECT id FROM admins ORDER BY first ASC";
 					   $r = mysqli_query($dbc,$q);
 					   
-					   while ($user_list = mysqli_fetch_assoc($r)) {
-						   $user_data = data_user($dbc,$user_list['id']);
+					   while ($admin_list = mysqli_fetch_assoc($r)) {
+						   $admin_data = data_admin($dbc,$admin_list['id']);
 						   ?>
-						   <option value="<?php echo $user_data['id']; ?>" 
+						   <option value="<?php echo $admin_data['id']; ?>" 
 						   	 <?php 
 						   	 	if(isset($_GET['id'])) {								   	    	
-                                    selected($user_data['id'],$opened['user'],'selected');
+                                    selected($admin_data['id'],$opened['admin'],'selected');
 					            } else {
-									selected($user_data['id'],$user['id'],'selected');
+									selected($admin_data['id'],$admin['id'],'selected');
 					            }  
 								
-							?>> <?php echo $user_data['fullname']; ?></option>     
+							?>> <?php echo $admin_data['fullname']; ?></option>     
 					  <?php } ?>
 					     
    	  	 		</select>

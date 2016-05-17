@@ -1,4 +1,4 @@
-<div style="border-bottom: 8px solid gray ; height: 500px;width:500px;position: absolute">
+<div>
 	<div class="carousel slide" data-ride="carousel" id="carousel-ex">
 		<ol class="carousel-indicators">
 			<li data-target="#carousel-ex" data-slide-to="0" class="active"></li>
@@ -14,7 +14,7 @@
 		<div class="carousel-inner">
 			<!--1. Linux Distros -->
 			<div class="item active">
-			    <img src="ImageSlider/linuxdistros.jpg" alt="Linux Distros Image"/>
+			    <img style="height:350px;width:100%" src="ImageSlider/linuxdistros.jpg" alt="Linux Distros Image"/>
 			    <div class="carousel-caption">	
 			    	<h2>Linux Distros</h2>
 			        <p>More than 20 different Linux Distros available</p>
@@ -24,7 +24,7 @@
 			
 			<!--2. Ubuntu -->
 			<div class="item">
-			    <img src="ImageSlider/ubuntu.jpg" alt="Ubuntu Image"/>
+			    <img style="height:350px;width:100%" src="ImageSlider/ubuntu.jpg" alt="Ubuntu Image"/>
 			    <div class="carousel-caption">	
 			    	<h2>Ubuntu</h2>
 			        <p>The most popular Linux Distribution</p>
@@ -34,7 +34,7 @@
 			
 			<!--3. Linux Mint -->
 			<div class="item">
-			    <img src="ImageSlider/linuxmint.jpg" alt="Linux Mint Image"/>
+			    <img style="height:350px;width:100%" src="ImageSlider/linuxmint.jpg" alt="Linux Mint Image"/>
 			    <div class="carousel-caption">	
 			    	<h2>Linux Mint</h2>
 			        <p>The modern, elegant and comfortable operating system </p>
@@ -44,7 +44,7 @@
 			
 			<!--4. Kali Linux -->
 			<div class="item">
-			    <img src="ImageSlider/kalilinux.jpg" alt="Kali Linux Image"/>
+			    <img src="ImageSlider/kalilinux.jpg" style="height:350px;width:100%" alt="Kali Linux Image"/>
 			    <div class="carousel-caption">	
 			    	<h2>Kali Linux</h2>
 			        <p>Hacker's OS for digital forensics and penetration testing</p>
@@ -54,7 +54,7 @@
 			
 			<!--5. PlayOnLinux -->
 			<div class="item">
-			    <img src="ImageSlider/playonlinux.jpg" alt="PlayOnLinux Image"/>
+			    <img src="ImageSlider/playonlinux.jpg" style="height:350px;width:100%" alt="PlayOnLinux Image"/>
 			    <div class="carousel-caption">	
 			    	<h2>PlayOnLinux</h2>
 			        <p>A graphical front-end for installing Windows softwares</p>
@@ -64,7 +64,7 @@
 			
 			<!--6. Steam -->
 			<div class="item">
-			    <img src="ImageSlider/steam.png" alt="Steam Image"/>
+			    <img src="ImageSlider/steam.png" style="height:350px;width:100%" alt="Steam Image"/>
 			    <div class="carousel-caption">	
 			    	<h2>Steam</h2>
 			        <p>Play all the computer games on linux using steam</p>
@@ -74,7 +74,7 @@
 			
 			<!--7. Macbuntu -->
 			<div class="item">
-			    <img src="ImageSlider/macbuntu.png" alt="Macbuntu Image"/>
+			    <img src="ImageSlider/macbuntu.png" style="height:350px;width:100%" alt="Macbuntu Image"/>
 			    <div class="carousel-caption">	
 			    	<h2>Macbuntu</h2>
 			        <p>Customize your linux to look exactly like Apple Mackbook</p>
@@ -84,7 +84,7 @@
 			
 			<!--8. Break Windows -->
 			<div class="item">
-			    <img src="ImageSlider/breakwindows.jpg" alt="Break Wondows Image"/>
+			    <img src="ImageSlider/breakwindows.jpg" style="height:350px;width:100%" alt="Break Wondows Image"/>
 			    <div class="carousel-caption">	
 			    	<h2>Break windows</h2>
 			        <p>Experience a whole new world of linux outside the windows</p>

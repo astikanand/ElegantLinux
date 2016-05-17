@@ -1,4 +1,4 @@
- <?php
+           <?php
  
  function nav_main($dbc, $path){
      $q = "SELECT * FROM navigation ORDER BY position ASC";
@@ -9,7 +9,9 @@
 		
 		?>	
 
-		<li<?php selected($path['call_parts'][0], $nav['slug'], ' class="active"') ?>><a href="<?php echo $nav['url']; ?>"><?php echo $nav['label']; ?></a></li>
+		<li<?php selected($path['call_parts'][0], $nav['slug'], ' class="active"') ?>><a href="<?php echo $nav['url']; ?>"><?php echo $nav['label']; ?></a>
+		  
+		</li>
 
 	<?php }
 

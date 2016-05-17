@@ -2,7 +2,7 @@
   # Start the session:
   session_start();
   
-  if(!isset($_SESSION['username'])) {
+  if(!isset($_SESSION['adminname'])) {
   	header('Location: login.php');
   }
 
@@ -15,7 +15,7 @@
 <html>
 	<head>
 		 <!-- Title of the page is displayed -->
-		 <title><?php echo $page['title'].' | '.$site_title; ?></title>
+		 <title><?php echo $page .' | '.$site_title; ?></title>
 		 
 		 <!-- 3 Must Tags -->
 		 <meta charset="utf-8">
